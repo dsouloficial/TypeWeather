@@ -17,25 +17,25 @@ export function Details({ data }) {
         <WeatherItem
           icon={thermometerSimpleLight}
           title="Sensação térmica"
-          value={data.feels_like}
+          value={`${data.feels_like}ºc`}
         />
 
         <WeatherItem
           icon={cloudRainLight}
           title="Probabilidade de chuva"
-          value={data.probability}
+          value={`${data.probability}%`}
         />
 
         <WeatherItem
           icon={windLight}
           title="Velocidade do vento"
-          value={data.wind_speed}
+          value={`${data.wind_speed} Km/h`}
         />
 
         <WeatherItem
           icon={dropLight}
           title="Umidade do ar"
-          value={data.humidity}
+          value={`${data.humidity}%`}
         />
 
         <WeatherItem

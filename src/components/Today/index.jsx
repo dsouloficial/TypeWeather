@@ -5,7 +5,7 @@ import { Logo } from '../Logo';
 import { SelectCity } from '../SelectCity';
 import { isDayTime } from '../../utils/isDayTime';
 
-export function Today({ city, state, weather, onSearchValue }) {
+export function Today({ city, weather, onSearchValue }) {
   const today = dayjs(new Date()).format('dddd, DD [de] MMMM [de] YYYY');
   const isDay = isDayTime();
 
@@ -21,24 +21,18 @@ export function Today({ city, state, weather, onSearchValue }) {
 
       <div className='today-details' style={{ backgroundImage: `url(${bgImg})` }}>
         <header>
-          <h3>
-            {city && city}
-            {city && state && ', '}
-            {state && state}
-          </h3>
+          <h3>{city}</h3>
           <p>{today}</p>
         </header>
 
         <footer>
-          <div>
-            <h1>{weather?.temp}</h1>
-            <p>
-              {weather?.temp_min} / {weather?.temp_max} <span>&#8226;</span> {weather.description}
-            </p>
-          </div>
-
+          <h1>{weather?.temp}ºc</h1>
           <img src={icon} alt="Tempo" />
         </footer>
+
+        <p>
+          {weather?.temp_min}ºc / {weather?.temp_max}ºc <span>&#8226;</span> {weather.description}
+        </p>
       </div>
     </section>
   )

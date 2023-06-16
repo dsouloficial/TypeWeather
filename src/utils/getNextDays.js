@@ -6,9 +6,7 @@ export function getNextDays() {
 
   for (let i = 0; i < 5; i++) {
     const date = new Date();
-
     date.setDate(today.getDate() + (i + 1));
-
     days.push(dayjs(date).format('DD/MM'));
   }
 

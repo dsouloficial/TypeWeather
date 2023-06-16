@@ -1,7 +1,7 @@
 import './styles.css';
 
 import { useEffect, useState } from 'react';
-import { searchCityWeather } from '../../services/weather/getWeatherService';
+import { getWeatherByCity } from '../../services/getWeatherByCity';
 
 import { Today } from '../../components/Today';
 import { Details } from '../../components/Details';
@@ -9,19 +9,19 @@ import { Loading } from '../../components/Loading';
 import { NextDays } from '../../components/NextDays';
 
 export function Dashboard() {
-  const [weather, setWeather] = useState({});
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [citySearch, setCitySearch] = useState(JSON.parse(localStorage.getItem('@typewheather:city')));
+  const [city, setCity] = useState(JSON.parse(localStorage.getItem('@typewheather:city')));
 
   useEffect(() => {
     setIsLoading(true);
 
-    const { latitude, longitude } = citySearch;
+    const { latitude, longitude } = city;
 
-    searchCityWeather({ latitude, longitude })
-      .then((response) => setWeather(response))
+    getWeatherByCity({ latitude, longitude })
+      .then((response) => setData(response))
       .finally(() => setIsLoading(false));
-  }, [citySearch]);
+  }, [city]);
 
   if (isLoading) {
     return <Loading />
@@ -29,15 +29,9 @@ export function Dashboard() {
 
   return (
     <div className='dashboard'>
-      <Today
-        city={citySearch.city}
-        state={citySearch.state}
-        weather={weather.today.weather}
-        onSearchValue={setCitySearch}
-      />
-
-      <Details data={weather.today.details} />
-      <NextDays data={weather.nextDays} />
+      <Today city={city.name} onSearchValue={setCity} weather={data.today.weather} />
+      <Details data={data.today.details} />
+      <NextDays data={data.nextDays} />
     </div>
   )
 }
