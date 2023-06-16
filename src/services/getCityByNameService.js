@@ -6,7 +6,7 @@ export async function getCityByNameService(name) {
 
     const city = {
       id: data.id,
-      name: `${data.name}, ${data.sys.country}`,
+      name: data.sys.country ? `${data.name}, ${data.sys.country}` : data.name,
       longitude: data.coord.lon,
       latitude: data.coord.lat,
     };
