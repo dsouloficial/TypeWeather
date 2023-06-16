@@ -1,0 +1,100 @@
+.today {
+  grid-area: today;
+  padding: 16px;
+  background-color: var(--gray-800);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.today form {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+}
+
+.today-details {
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 8px;
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.today-details header {
+  flex: 1;
+  color: var(--gray-100);
+
+}
+
+.today-details header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.today-details header p {
+  font-size: 1rem;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.today-details p::first-letter {
+  text-transform: uppercase;
+}
+
+.today-details footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  overflow: hidden;
+}
+
+.today-details footer h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.today-details footer p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.today-details footer p span {
+  opacity: 0.4;
+}
+
+.today-details footer img {
+  width: 20rem;
+  height: 20rem;
+}
+
+@media (max-width: 768px) {
+  .today-details footer h1 {
+    font-size: 3rem;
+  }
+
+  .today-details footer img {
+    width: 12rem;
+
+    margin-bottom: -124px;
+    margin-right: -42px;
+  }
+
+  .today-details footer p {
+    font-size: 0.8rem;
+  }
+}

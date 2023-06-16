@@ -1,0 +1,29 @@
+.weather-detail {
+  grid-area: weather-details;
+
+  background-color: var(--gray-800);
+  padding: 28px 24px 24px;
+  border-radius: 12px;
+}
+
+.weather-detail h1 {
+  font-size: 1rem;
+  color: var(--gray-400);
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+
+.weather-detail div:not(:last-child) {
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.weather-items {
+  margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  .weather-detail {
+    overflow: auto;
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  width: 100%;
+  height: calc(100vh - 48px);
+  background-image: url("background.png");
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 24px;
+}
+
+.home main {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home main h1 {
+  font-size: 2rem;
+  color: var(--gray-100);
+  text-align: center;
+}
+
+.home main h1 strong {
+  color: var(--blue-light);
+}
+
+.home main span {
+  color: var(--gray-200);
+  font-size: 1.25rem;
+  margin-bottom: 3.5rem;
+}

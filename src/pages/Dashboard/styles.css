@@ -1,0 +1,18 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: calc(60vh - 48px) calc(40vh - 32px);
+
+  gap: 24px;
+
+  grid-template-areas: "today weather-details"
+    "today next-days"
+}
+
+
+@media (max-width: 768px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+}
