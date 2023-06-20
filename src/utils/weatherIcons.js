@@ -12,6 +12,11 @@ import iconClearNight from '../assets/svg/clear_night.svg';
 import bgClearDay from '../assets/img/bg_clear_day.png';
 import bgClearNight from '../assets/img/bg_clear_night.png';
 
+import iconSnowDay from '../assets/svg/snow_day.svg';
+import iconSnowNight from '../assets/svg/snow_night.svg';
+import bgSnowDay from '../assets/img/bg_snow_day.png';
+import bgSnowNight from '../assets/img/bg_snow_night.png';
+
 export const weatherIcons = {
   Clouds: {
     name: "Nuvens",
@@ -33,5 +38,12 @@ export const weatherIcons = {
     bg_night: bgClearNight,
     icon_day: iconClearDay,
     icon_night: iconClearNight,
+  },
+  Snow: {
+    name: "Neve",
+    bg_day: bgSnowDay,
+    bg_night: bgSnowNight,
+    icon_day: iconSnowDay,
+    icon_night: iconSnowNight,
   },
 }

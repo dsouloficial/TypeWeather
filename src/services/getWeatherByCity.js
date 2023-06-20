@@ -8,6 +8,8 @@ export async function getWeatherByCity({ latitude, longitude }) {
   const { data } = await api.get(`/forecast?lat=${latitude}&lon=${longitude}`);
   const { main, weather, wind, pop } = data.list[0];
 
+  console.log(weather)
+
   const today = {
     weather: {
       temp: Math.ceil(main.temp),
