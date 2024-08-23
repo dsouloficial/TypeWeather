@@ -44,5 +44,5 @@ O projeto TypeWeather foi desenvolvido com as seguintes tecnologias:
 Se tiver alguma dúvida, sugestão ou feedback, sinta-se à vontade para entrar em contato:
 
 - [LinkedIn](https://www.linkedin.com/in/denilson-bernardo/)
-- Email: denilsonbnasciemnto07@gmail.com
+- Email: denilsonbnascimento07@gmail.com
 - WhatsApp: 011978635333
