@@ -1,0 +1,11 @@
+{
+  "compilerOptions": { // Opções de configuração para o compilador TypeScript.
+    "composite": true, // Composto por várias partes interdependentes.
+    "module": "ESNext", // Gerar o código Javascript com o formato compatível com o ECMAScript mais recente.
+    "moduleResolution": "Node", // Como o TypeScript resolve as importações de módulos.
+    "allowSyntheticDefaultImports": true // Pode importar módulos que não exportam um valor padrão 
+  },
+  "include": [
+    "vite.config.ts" // Especifica quais arquivos devem ser incluídos no processo de compilação. 
+  ]
+}

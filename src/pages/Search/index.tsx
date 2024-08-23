@@ -2,11 +2,12 @@ import './styles.css';
 
 import { useNavigate } from 'react-router-dom';
 import { SelectCity } from '../../components/SelectCity';
+import { CityProps } from '../../services/getCityByNameService';
 
 export function Search() {
   const navigate = useNavigate();
 
-  function handleSelected(city) {
+  function handleSelected(city: CityProps) {
     localStorage.setItem('@typewheather:city', JSON.stringify(city));
     navigate('/dashboard');
   }

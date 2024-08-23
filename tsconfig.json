@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Define a versão do ECMAScript para a qual o TypeScript irá compilar o código. 
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ], // Especifica as bibliotecas que devem ser incluídas durante a compilação. 
+    "allowJs": true, // Desabilita a compilação de arquivos JavaScript junto com os arquivos TypeScript. 
+    "skipLibCheck": true, // Ignora a verificação de bibliotecas de definição de tipo durante a compilação. 
+    "esModuleInterop": false, // Ocódigo não irá usar a forma de importação/exportação de módulos ES padrão.
+    "allowSyntheticDefaultImports": true, // Permite o uso de importações sintéticas de valores padrão em módulos TypeScript, mesmo que o módulo não exporte explicitamente um valor padrão.
+    "strict": true, // Ativa o modo estrito do TypeScript, que aplica um conjunto mais rigoroso de regras de verificação de tipo e comportamento mais restrito.
+    "forceConsistentCasingInFileNames": true, // Garante que os nomes de arquivo sejam tratados de forma consistente, exigindo correspondência de maiúsculas e minúsculas nos nomes de arquivo ao importá-los.
+    "module": "ESNext", // Define o formato de módulo que será usado ao gerar o código JavaScript. Nesse caso, é utilizado o formato de módulo compatível com o ECMAScript mais recente.
+    "moduleResolution": "Node", // Especifica como o TypeScript resolve as importações de módulos. Nesse caso, utiliza o algoritmo de resolução de módulos do Node.js.
+    "resolveJsonModule": true, // Habilita a importação direta de arquivos JSON como módulos.
+    "isolatedModules": true, // Habilita a compilação de módulos independentes. Isso significa que cada arquivo será tratado como um módulo separado durante a compilação.
+    "noEmit": true, // Impede a geração de arquivos de saída (JavaScript) durante a compilação. Apenas a verificação de tipo será realizada.
+    "jsx": "react-jsx" // Especifica qual tipo de sintaxe JSX deve ser usado durante a compilação do TypeScript. 
+  },
+  "include": [
+    "src" // Apenas a pasta src e seus subdiretórios serão incluídos na compilação.
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json" // referências entre projetos TypeScript
+    }
+  ]
+}
