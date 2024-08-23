@@ -11,9 +11,8 @@ Com uma interface amigável e fácil de usar, o TypeWeather é a ferramenta idea
 
 <div align='center'>
 
-![preview](./public/previewDesktopTypeWeather.png)
-[TypeWeather](https://type-weather-2t8hfqeju-romeusorionaet.vercel.app)
-![preview](./public/previewMobileTypeWeather.png)
+![preview](./public/TypeWeather1.png)
+![preview](./public/TypeWeather2.png)
 
 </div>
 
